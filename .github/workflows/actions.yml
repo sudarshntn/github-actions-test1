@@ -10,6 +10,10 @@ jobs:
         run: |
           pwd
           ls -al
+          echo $GITHUB_SHA
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_REPOSITORY
+          echo "${{ github.token }}"
       - name: checkout repo files
         uses: actions/checkout@v1
       - name: after checkout
