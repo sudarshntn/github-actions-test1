@@ -1,0 +1,14 @@
+name: container
+
+on: push
+
+jobs:
+  container:
+    runs-on: windows-latest
+    container:
+      image:  node:16-alpine3.12
+    steps:
+      - name: Log node version
+        run: |
+          node -v
+          cat /etc/os-release
