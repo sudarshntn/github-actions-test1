@@ -38,10 +38,8 @@ jobs:
         with:
           repository: TestOrgsuda/TestingActionsSecrets
           token: ${{ secrets.MY_GHE_TOKEN }}
-      - name: List files
+      - name: List files & execute shell script
         run: |
           pwd
           ls -al
-      - name: Execute the shell script
-        run: |
           ./test.sh Hello-World
