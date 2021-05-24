@@ -38,3 +38,7 @@ jobs:
         with:
           repository: TestOrgsuda/TestingActionsSecrets
           token: ${{ secrets.MY_GHE_TOKEN }}
+      - name: List files
+        run: |
+          pwd
+          ls -al
