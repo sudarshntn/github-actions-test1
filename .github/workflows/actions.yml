@@ -30,3 +30,11 @@ jobs:
           who-to-greet: testing
       - name: Log greeting time
         run: echo "${{ steps.greet.outputs.time }}"
+  clone-another-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone another repo in the org
+        uses: actions/checkout@master
+        with:
+          repository: TestOrgsuda/TestingActionsSecrets
+          token: ${{ secrets.MY_GHE_TOKEN }}
