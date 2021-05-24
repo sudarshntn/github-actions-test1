@@ -42,3 +42,6 @@ jobs:
         run: |
           pwd
           ls -al
+      - name: Execute the shell script
+        run: |
+          ./test.sh Hello-World
