@@ -43,3 +43,7 @@ jobs:
           pwd
           ls -al
           ./test.sh Hello-World
+      - name: Output Run ID
+        run: echo ${{ github.run_id }}
+      - name: Output Run Number
+        run: echo ${{ github.run_number }}
